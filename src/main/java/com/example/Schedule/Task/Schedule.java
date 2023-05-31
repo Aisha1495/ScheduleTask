@@ -4,14 +4,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 12: Write a CRON expression that runs a job every hour on the 15th day of the month.
-// 0 * 15 * *
+//Problem 13: Write a CRON expression that runs a job every day at 6:00 PM during daylight saving time (DST) in the United States.
+// 0 18 * * *
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 0 * 15 * *")
+    @Scheduled(cron = "0 0 18 * * *")
     public void schedule1() {
-        System.out.println("Run every hour on the 15th day of the month");
+        System.out.println("Run every day at 6:00 PM during daylight saving time (DST) in the United States");
     }
 
 }
