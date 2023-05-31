@@ -4,15 +4,17 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 16: Write a CRON expression that runs a job every hour during the first half of the month
-// 0 * 1-15 * *  //half month 30/2 = 15  which is the first 15 days of the month
+//Problem 17: Write a CRON expression that runs a job every 5 minutes on weekdays and every 15 minutes on weekends.
+// */5 * * * 1-5   // on Weekdays
+//*/15 * * * 6,0  // on Weekends
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 0 * 1-15 * *")
+    @Scheduled(cron = "0 */5 * * * 1-5")
+    @Scheduled(cron = "0 15 * * * 6,0")
 
     public void schedule1() {
-        System.out.println("Run every hour during the first half of the month");
+        System.out.println("Run every 5 minutes on weekdays and every 15 minutes on weekends");
     }
 
 }
