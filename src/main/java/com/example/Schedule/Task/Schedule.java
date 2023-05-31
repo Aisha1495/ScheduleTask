@@ -4,17 +4,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 17: Write a CRON expression that runs a job every 5 minutes on weekdays and every 15 minutes on weekends.
-// */5 * * * 1-5   // on Weekdays
-//*/15 * * * 6,0  // on Weekends
+//Problem 18: Write a CRON expression that runs a job at 11:30 PM every Friday the 13th.
+// 30 23 13 * 6 //6 friday
+
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 */5 * * * 1-5")
-    @Scheduled(cron = "0 15 * * * 6,0")
+    @Scheduled(cron = "0 30 23 13 * 6")
 
     public void schedule1() {
-        System.out.println("Run every 5 minutes on weekdays and every 15 minutes on weekends");
+        System.out.println("Run at 11:30 PM every Friday the 13th");
     }
 
 }
