@@ -4,14 +4,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 1: Write a CRON expression that runs a job every five minutes.
-//  */5 * * * *
+//Problem 2: Write a CRON expression that runs a job every hour.
+//  0 * * * *
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 */5 * * * *")
+    @Scheduled(cron = "0 0 * * * *")
     public void schedule1() {
-        System.out.println("Run every five minutes");
+        System.out.println("Run every hour");
     }
 
 }
