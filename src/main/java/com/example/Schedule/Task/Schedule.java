@@ -4,16 +4,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 18: Write a CRON expression that runs a job at 11:30 PM every Friday the 13th.
-// 30 23 13 * 6 //6 friday
+//Problem 19: Write a CRON expression that runs a job every hour but only on even-numbered days of the month.
+// 0 * */2 * *  //*/2 every even-numbered
 
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 30 23 13 * 6")
+    @Scheduled(cron = "0 0 * */2 * *")
 
     public void schedule1() {
-        System.out.println("Run at 11:30 PM every Friday the 13th");
+        System.out.println("Run every hour but only on even-numbered days of the month");
     }
 
 }
