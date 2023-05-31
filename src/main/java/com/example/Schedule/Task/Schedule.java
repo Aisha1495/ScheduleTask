@@ -4,14 +4,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 3: Write a CRON expression that runs a job every day at 2:30 PM.
-//  30 14 * * *
+//Problem 4: Write a CRON expression that runs a job every Monday at 8:00 AM.
+//  0 8 * * 1
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 30 14 * * *")
+    @Scheduled(cron = "0 0 8 * * 1")
     public void schedule1() {
-        System.out.println("Run every day at 2:30 PM");
+        System.out.println("Run every Monday at 8:00 AM");
     }
 
 }
