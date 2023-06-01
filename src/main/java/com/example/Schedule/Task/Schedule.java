@@ -179,17 +179,28 @@ import org.springframework.stereotype.Component;
 
 //Problem 38: Write a CRON expression that runs a job every 10 minutes on weekdays between 8:00 AM and 3:00 PM.
 //*/10 8-14 * * 1-5
+//@Component
+//public class Schedule {
+//    @Scheduled(cron = "0 */10 8-14 * * 1-5")
+//
+//    public void schedule1() {
+//        System.out.println("Run every 10 minutes on weekdays between 8:00 AM and 3:00 PM");
+//    }
+//}
+
+
+//Problem 39: Write a CRON expression that runs a job at 11:00 PM every day of the year.
+//0 23 * * *
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 */10 8-14 * * 1-5")
+    @Scheduled(cron = "0 0 23 * * *")
 
     public void schedule1() {
-        System.out.println("Run every 10 minutes on weekdays between 8:00 AM and 3:00 PM");
+        System.out.println("Run at 11:00 PM every day of the year");
     }
 }
 
 
-//Problem 39: Write a CRON expression that runs a job at 11:00 PM every day of the year.
-//
+
 //Problem 40: Write a CRON expression that runs a job every 30 minutes on the 15th and last day of every month.
 //
