@@ -88,19 +88,31 @@ import org.springframework.stereotype.Component;
 
 //Problem 31: Write a CRON expression that runs a job at 11:30 PM every Friday.
 //30 23 * * 5 --- 5 is Friday wiedlyTime
+//@Component
+//public class Schedule {
+//    @Scheduled(cron = "0 30 23 * * 5")
+//
+//    public void schedule1() {
+//        System.out.println("Run at 11:30 PM every Friday");
+//    }
+//
+//}
+
+
+//Problem 32: Write a CRON expression that runs a job at 3:15 AM every day.
+//15 3 * * *
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 30 23 * * 5")
+    @Scheduled(cron = "0 15 3 * * *")
 
     public void schedule1() {
-        System.out.println("Run at 11:30 PM every Friday");
+        System.out.println("Run at 3:15 AM every day");
     }
 
 }
 
 
-//Problem 32: Write a CRON expression that runs a job at 3:15 AM every day.
-//
+
 //Problem 33: Write a CRON expression that runs a job every hour from 6:00 AM to 8:00 PM on weekdays.
 //
 //Problem 34: Write a CRON expression that runs a job every 30 minutes on the 15th and 30th day of every month.
