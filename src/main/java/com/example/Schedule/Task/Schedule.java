@@ -4,16 +4,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
-//Problem 22: Write a CRON expression that runs a job at the top of every hour between 9:00 AM and 5:00 PM on the 15th day of the month.
-// 0 9-17 15 * *
+//Problem 24: Write a CRON expression that runs a job at 10:00 PM every day in the month of December
+// 0 22 * 12 *
 
 
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 0 9-17 15 * *")
+    @Scheduled(cron = "0 0 22 * 12 *")
 
     public void schedule1() {
-        System.out.println("Run every hour between 9:00 AM and 5:00 PM on the 15th day of the month");
+        System.out.println("Run at 10:00 PM every day in the month of December");
     }
 
 }
