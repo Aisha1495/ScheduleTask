@@ -46,16 +46,30 @@ import org.springframework.stereotype.Component;
 
 //Problem 28: Write a CRON expression that runs a job at 12:00 PM on the 3rd Wednesday of every month.
 //0 12 * * 3#3 --- (3#3) is for the 3rd occurrence of Wednesday in the month...
+//@Component
+//public class Schedule {
+//    @Scheduled(cron = "0 0 12 * * 3#3")
+//
+//    public void schedule1() {
+//        System.out.println("Run at 12:00 PM on the 3rd Wednesday of every month");
+//    }
+//
+//}
+
+
+
+//Problem 29: Write a CRON expression that runs a job at 10:00 PM every Sunday in the months of July,August, and September.
+//0 22 * 7-9 0
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 0 12 * * 3#3")
+    @Scheduled(cron = "0 0 22 * 7-9 0")
 
     public void schedule1() {
-        System.out.println("Run at 12:00 PM on the 3rd Wednesday of every month");
+        System.out.println("Run at 10:00 PM every Sunday in the months of July,August, and September");
     }
 
 }
 
-//Problem 29: Write a CRON expression that runs a job at 10:00 PM every Sunday in the months of July,August, and September.
-//
+
+
 //Problem 30: Write a CRON expression that runs a job at 12:00 PM every day except Sunday in the month of July.
