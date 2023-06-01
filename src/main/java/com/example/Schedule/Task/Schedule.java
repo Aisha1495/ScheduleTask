@@ -74,12 +74,46 @@ import org.springframework.stereotype.Component;
 
 //Problem 30: Write a CRON expression that runs a job at 12:00 PM every day except Sunday in the month of July.
 //0 12 * 7 1-6
+//@Component
+//public class Schedule {
+//    @Scheduled(cron = "0 0 12 * 7 1-6")
+//
+//    public void schedule1() {
+//        System.out.println("Run at 12:00 PM every day except Sunday in the month of July");
+//    }
+//
+//}
+
+
+
+//Problem 31: Write a CRON expression that runs a job at 11:30 PM every Friday.
+//30 23 * * 5 --- 5 is Friday wiedlyTime
 @Component
 public class Schedule {
-    @Scheduled(cron = "0 0 12 * 7 1-6")
+    @Scheduled(cron = "0 30 23 * * 5")
 
     public void schedule1() {
-        System.out.println("Run at 12:00 PM every day except Sunday in the month of July");
+        System.out.println("Run at 11:30 PM every Friday");
     }
 
 }
+
+
+//Problem 32: Write a CRON expression that runs a job at 3:15 AM every day.
+//
+//Problem 33: Write a CRON expression that runs a job every hour from 6:00 AM to 8:00 PM on weekdays.
+//
+//Problem 34: Write a CRON expression that runs a job every 30 minutes on the 15th and 30th day of every month.
+//
+//Problem 35: Write a CRON expression that runs a job every 5 minutes on the 1st day of every month.
+//
+//Problem 36: Write a CRON expression that runs a job every hour on the hour from 9:00 AM to 5:00 PM on weekdays.
+//
+//Problem 37: Write a CRON expression that runs a job every 15 minutes from 2:00 PM to 10:00 PM on weekends.
+//
+//Problem 38: Write a CRON expression that runs a job every 10 minutes on weekdays between 8:00 AM and 3:00 PM.
+//
+//Problem 39: Write a CRON expression that runs a job at 11:00 PM every day of the year.
+//
+//Problem 40: Write a CRON expression that runs a job every 30 minutes on the 15th and last day of every month.
+//
